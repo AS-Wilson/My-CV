@@ -1,0 +1,152 @@
+\documentclass[12pt,a4paper,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and academicons fonts
+%% and packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+\usepackage[nodayofweek]{datetime} 
+\usepackage{paracol}
+\usepackage{setspace} %1.5 line spacing
+\usepackage[none]{hyphenat}
+
+% Change the page layout if you need to
+\geometry{left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm,columnsep=8mm}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+
+\definecolor{PastelGreen}{HTML}{00a86b}
+\definecolor{DarkPastelGreen}{HTML}{00754b}
+\definecolor{DarkerPastelGreen}{HTML}{00422a}
+\definecolor{DarkGoldenRod}{HTML}{b8860b}
+
+\colorlet{name}{DarkerPastelGreen}
+\colorlet{tagline}{DarkPastelGreen}
+\colorlet{heading}{DarkPastelGreen}
+\colorlet{headingrule}{DarkGoldenRod}
+\colorlet{subheading}{PastelGreen}
+\colorlet{accent}{PastelGreen}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\onehalfspace   % 1.5 line spacing
+
+
+\begin{document}
+
+
+%%%%%%%%%% HEADER - NAME & TITLE %%%%%%%%%%
+\name{Andrew Simon Wilson}
+\tagline{Undergraduate Mechatronic Engineering Student}
+
+%%%%%%%%%% HEADER - CONTACT INFO, ADDRESS, SOCIAL MEDIA ETC. %%%%%%%%%%
+\personalinfo{
+	\email{andrew.s.wilson@tutanota.com}
+	\linkedin{andrew-simon-wilson} 
+	\github{AS-Wilson}
+	\phone{+44 7930 560 383}
+	\mailaddress{41 Ashcroft Way, Lower Ballinderry, BT28 2AY, Northern Ireland}
+}
+  
+\begin{adjustwidth}{7cm}{}
+\makecvheader
+
+{\color{headingrule}\rule{\linewidth}{2pt}\par}
+\end{adjustwidth}
+
+\columnratio{0.7}
+\medskip
+\begin{paracol}{2}
+%%%%% RECIPIENT ADDRESS %%%%%
+{\taglinefont\color{tagline}EMIMEO Programme Office} \\
+\textbf{\color{accent}Université de Limoges} \\
+123 Avenue Albert Thomas \\
+87060 LIMOGES Cedex \\
+France \\
+
+{\color{headingrule}\rule{6cm}{2pt}\par}
+
+\switchcolumn
+
+\begin{flushright}
+	\textbf{\today}
+\end{flushright}
+
+\end{paracol}
+
+\vspace{5mm}
+
+
+
+
+
+%%%%% START OF LETTER CONTENT %%%%%
+\textbf{Dear Sir or Madam,} \\
+
+\vspace{1cm}
+
+
+
+%%%%% INTRO %%%%%
+My name is Andrew Wilson, I am a Northern Irish, Student Engineer currently studying a Bachelors of Engineering (BEng) in Mechatronics and a Diploma of Professional Practice (DPP).
+I would please like to state my interest in applying for the Erasmus Master on Innovative Microwave Electronics and Optics (EMIMEO).\linebreak
+
+
+I have a great interest in, and passion for, the topics of Electronic Design and Theory, RF Communications, and Embedded Software. This interest was cultivated later in my secondary school studies; during my final year BTEC Project I designed and programmed a PIC based door security system and PCB, I found the project incredibly interesting and was amazed at the tasks that could be accomplished through the use of Electronic Design and Embedded Systems. This interest has affected the decisions I have made for my studies and overall career. \linebreak
+
+The degree I am studying for is well suited to the EMIMEO programme, I have both studied and practised Electronic, Embedded Software, and Software engineering which are all key foundations to undertaking the degree. A detailed list of my awarded grades and marks are available in both my CV and my academic transcript should you wish to see them.
+During my year long Industrial Placement I worked at an ISTAR (Intelligence, Surveillance, Target Acquisition, and Reconnaissance) based engineering company called Seven Technologies Group working on different research \& design based projects. This work gave me critical experience in High-Speed Electronic design, Mechanical design, and Embedded Software engineering amongst others, I believe these and the experience I have gained in them directly relate to EMIMEO. \linebreak
+
+
+%%%%% WHY JEMARO, CHOSEN RESEARCH TOPIC %%%%%
+I know that  in the EMIMEO programme I would gain essential practical and theoretical research skills which would allow me to further my career and obtain a Master's in Electronics with the goal to secure a Research \& Design position in the field of Electronics. Not only would my professional goals be advanced but I would be given me the outstanding opportunity to work in a diverse Engineering environment, with people from a plethora of backgrounds. I see this programme as an experience that would not only advance my goals but also give me skills and knowledge that I would remember, and cherish, for the rest of my life. \linebreak
+
+
+%%%%% QUALIFICATIONS, EXPERIENCE, QUALITIES ETC. %%%%%
+
+I can offer the programme a comprehensive academic background evidenced through attainment of core modules. Additionally, my work positions at Seven Technologies and other companies have given me essential technical skills in a number of Engineering topics. This means that I can excel in the practical application of technologies and engineering as well as academic understanding. I believe this gives me some of the most essential Engineering tools to truly excel in EMIMEO. My participation in the Ulster Society of Student Engineers (USSE) has also provided me the opportunity to lead strategic and technical projects honing essential skills in communication, presentation, people managing, and time management to name a few. These non-technical skills have taught me a great deal about how to complete projects and carry out my studies and other extra-curricular activities in an effective and practical way. \linebreak
+
+
+Along with the mentioned relevant skills and experience I can offer a genuine passion in engineering, innovating, and learning. Whilst my grades may not be of the highest calibre and I find it difficult to convey my academic worth in writing, I can convey it best in practice with my hard work, determination, and dedication. \linebreak
+
+
+I sincerely hope that I will be considered for a position in the EMIMEO programme and I would like to thank you very much for reading my application.
+\vspace{1cm}
+
+
+\textbf{Yours faithfully,}\\
+\vspace{5mm}
+
+{\color{headingrule}\rule{6cm}{1pt}\par} 
+\vspace{2mm}
+\large\textbf{\color{tagline}Andrew Simon Wilson}
+
+
+
+\end{document}
