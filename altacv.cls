@@ -43,7 +43,7 @@
 %% https://github.com/plk/biblatex/issues/1044
 %% Will be removed when fix is released in biblatex 3.16
 \catcode30=12
-\RequirePackage[margin=2cm]{geometry}
+\RequirePackage[margin=1cm]{geometry}
 \RequirePackage[fixed]{fontawesome5}
 \RequirePackage{ifxetex,ifluatex}
 \RequirePackage{scrlfile}
@@ -154,7 +154,7 @@
 % \RequirePackage{marginfix}
 
 \setlength{\parindent}{0pt}
-\newcommand{\divider}{\textcolor{body!30}{\hdashrule{\linewidth}{0.6pt}{0.5ex}}\medskip}
+\newcommand{\divider}{\textcolor{body!30}{\hdashrule{\linewidth}{0.6pt}{0.5ex}}\vspace{3mm}} % Tighter vspace option: \medskip
 
 \newenvironment{fullwidth}{%
   \begin{adjustwidth}{}{\dimexpr-\marginparwidth-\marginparsep\relax}}
@@ -289,9 +289,9 @@
 
 \newcommand{\cvsection}[2][]{%
   \bigskip%
-  \ifstrequal{#1}{}{}{\marginpar{\vspace*{\dimexpr1pt-\baselineskip}\raggedright\input{#1}}}%
+  \ifstrequal{#1}{}{}{\marginpar{\vspace*{\dimexpr1pt-\baselineskip}\raggedright\input{#1}}} % Tighter vspace option: 
   {\color{heading}\cvsectionfont\MakeUppercase{#2}}\\[-1ex]%
-  {\color{headingrule}\rule{\linewidth}{2pt}\par}\medskip
+  {\color{headingrule}\rule{ \linewidth }{2pt}\par}\medskip
 }
 
 \newcommand{\cvsubsection}[1]{%
@@ -384,12 +384,12 @@
     \endgroup
 }
 
-\newcommand{\cvref}[3]{%
+\newcommand{\cvref}[2]{%
   \smallskip
   \textcolor{emphasis}{\textbf{#1}}\par
   \begin{description}[font=\color{accent},style=multiline,leftmargin=1.35em,align=left]
   \item[\small\normalfont\emailsymbol] #2
-  \item[\small\normalfont\mailaddresssymbol] #3
+  %\item[\small\normalfont\mailaddresssymbol] #3
   \end{description}
 %   \medskip
 }

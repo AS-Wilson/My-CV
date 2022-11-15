@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper,ragged2e,withhyper]{altacv}
+\documentclass[11pt,a4paper,withhyper]{altacv}
 %% AltaCV uses the fontawesome5 and academicons fonts
 %% and packages.
 %% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
@@ -8,8 +8,6 @@
 \usepackage{setspace} %1.5 line spacing
 \usepackage[none]{hyphenat}
 
-% Change the page layout if you need to
-\geometry{left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm,columnsep=8mm}
 
 % Change the font if you want to, depending on whether
 % you're using pdflatex or xelatex/lualatex
@@ -55,26 +53,29 @@
 \renewcommand{\itemmarker}{{\small\textbullet}}
 \renewcommand{\ratingmarker}{\faCircle}
 
-\onehalfspace   % 1.5 line spacing
+\setstretch{1.15}   % 1.5 line spacing
 
 
 \begin{document}
 
+% Change the page layout if you need to
+\newgeometry{left=1.25cm,right=1.25cm,top=1.25cm,bottom=1.25cm,columnsep=8mm} % min. for A4 is ~1.2cm
 
 %%%%%%%%%% HEADER - NAME & TITLE %%%%%%%%%%
 \name{Andrew Simon Wilson}
-\tagline{Mechatronic Engineer}
+\tagline{Engineer \& \href{http://www.erasmus-master.emimeo.eu/}{EMIMEO Masters Candidate}}
 
-%%%%%%%%%% HEADER - CONTACT INFO, ADDRESS, SOCIAL MEDIA ETC. %%%%%%%%%%
+%%%%%%%%%% HEADER - CONTACT INFO, SOCIAL MEDIA ETC. %%%%%%%%%%
 \personalinfo{
-	\email{andrew.s.wilson@protonmail.com}
-	\linkedin{andrew-simon-wilson} 
-	\github{AS-Wilson}
-	\phone{+44 7930 560 383}
-	\mailaddress{41 Ashcroft Way, Lower Ballinderry, BT28 2AY, Northern Ireland}
+  \email{andrew.s.wilson@protonmail.com}
+  \linkedin{andrew-simon-wilson}
+  \github{AS-Wilson} \\
+  \phone{+44 7930 560 383}
+  \mailaddress{\href{https://goo.gl/maps/UoFidSxZUr3fwpYF8}{41 Ashcroft Way, Lower Ballinderry, BT28 2AY, Northern Ireland}}
 }
+
   
-\begin{adjustwidth}{7cm}{}
+\begin{adjustwidth}{6.5cm}{}
 \makecvheader
 
 {\color{headingrule}\rule{\linewidth}{2pt}\par}
@@ -84,7 +85,7 @@
 \medskip
 \begin{paracol}{2}
 %%%%% RECIPIENT ADDRESS %%%%%
-{\taglinefont\color{tagline}Name of Company Depart.} \\
+{\taglinefont\color{tagline}Department} \\
 \textbf{\color{accent}Company Name etc.} \\
 No. and Street Address \\
 Rest of Address \\
@@ -100,44 +101,52 @@ Country \\
 
 \end{paracol}
 
-\vspace{5mm}
+\vspace{2.5mm}
 
 
 
 
 
 %%%%% START OF LETTER CONTENT %%%%%
-\textbf{Dear Sir or Madam,} \\
+\textbf{To whom it may concern,} {\scriptsize\color{accent}\MakeUppercase{I prefer to address a person or department by name if I know it or can find it out.}} \\
 
-\vspace{5mm}
 
+\vspace{3mm}
 
 
 %%%%% INTRO %%%%%
-My name is Andrew Wilson, I am a Northern Irish, Student Engineer currently studying a Bachelors of Engineering (BEng) in Mechatronics and a Diploma of Professional Practice (DPP).
-I would please like to state my interest in applying for XYZ position.\linebreak
-
-I have a great interest in, and passion for, the topics of Physics, Electronic Design and Theory, RF Communications, and Embedded Software. This interest was cultivated later in my secondary school studies; during my final year BTEC Project I designed and programmed a PIC based door security system and PCB, I found the project incredibly interesting and was amazed at the tasks that could be accomplished through the use of Electronic Design and Embedded Systems. This interest has affected the decisions I have made for my studies and overall career. \linebreak
-
-During my year long Industrial Placement I worked at an ISTAR (Intelligence, Surveillance, Target Acquisition, and Reconnaissance) based engineering company called Seven Technologies Group working on different research \& design based projects. This work gave me critical experience in High-Speed Electronic design, Mechanical design, and Embedded Software engineering amongst others. \linebreak
-
-%%%%% QUALIFICATIONS, EXPERIENCE, QUALITIES ETC. %%%%%
-
-I can offer a comprehensive academic background evidenced through attainment of core modules. Additionally, my work positions at Seven Technologies and other companies have given me essential technical skills in a number of Engineering topics. This means that I can excel in the practical application of technologies and engineering as well as academic understanding. My participation in the Ulster Society of Student Engineers (USSE) has also provided me the opportunity to lead strategic and technical projects honing essential skills in communication, presentation, people managing, and time management to name a few. These non-technical skills have taught me a great deal about how to complete projects and carry out my studies and other extra-curricular activities in an effective and practical way. \linebreak
+I am an Engineer from Ireland currently studying in the \href{http://www.erasmus-master.emimeo.eu/}{EMIMEO (Erasmus Master on Innovative Microwave Electronics and Optics) Programme}, an \textbf{\href{https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en}{Erasmus Mundus Masters}} on Microwave Electronics and Photonics.
+I would please like to state my interest in applying for \textbf{\color{accent}\MakeUppercase{X position}}. \linebreak
 
 
-Along with the mentioned relevant skills and experience I can offer a genuine passion in engineering, innovating, and learning. Whilst my grades may not be of the highest calibre and I find it difficult to convey my academic worth in writing, I can convey it best in practice with my hard work, determination, and dedication. \linebreak
+%%%%% INTEREST & EXPERIENCE %%%%%
+
+\textbf{\color{accent}\MakeUppercase{I change the following to highlight any experience or interest depending on the position I am applying for.}}
+
+I have a great interest in, and passion for, the topics of Physics (specifically Quantum Physics), Electronic Design and Theory, Robotics, and Embedded Software. \linebreak 
+During the two years that I worked at an ISTAR (Intelligence, Surveillance, Target Acquisition, and Reconnaissance) based engineering company called \href{https://www.7techgroup.com/}{Seven Technologies Group}. I worked on different research \& design based projects. This work gave me critical experience in high-speed electronic design (both digital and analogue), embedded software using C, C++, and Linux, application software in the form of Python, constructing test procedures, and Mechanical design along with many other topics. \linebreak
 
 
-I sincerely hope that I will be considered for a position in XYZ and I would like to thank you very much for reading my application.
-\vspace{5mm}
+%%%%% SKILLS, QUALITIES, ACADEMICS ETC. %%%%%
+
+I can offer a comprehensive academic background which is suited to \textbf{\color{accent}\MakeUppercase{X position}}, evidenced through the following modules I have studied including \textbf{\color{accent}\MakeUppercase{I highlight modules I have studied that are relevant to position}}.
+Additionally, my work positions at Seven Technologies group, freelancing, and at other companies have given me essential technical skills in a number of Engineering and Physics topics. This means that I can excel in the practical application of technologies and engineering with comprehensive academic understanding. \linebreak
+
+My time as chairperson of the Ulster Society of Student Engineers (USSE) has also provided me the opportunity to lead strategic and technical projects honing essential skills in communication, presentation, people managing, and time management to name a few. These non-technical skills have taught me a great deal about how to complete projects and carry out my studies and other extra-curricular activities in an effective and practical way. \linebreak
+
+
+%%%%% CONCLUSION %%%%%
+
+Along with the mentioned relevant skills and experience I can offer a genuine passion in engineering, innovating, and learning. I have devoted considerable time to applying methods used in education. With my hard work, determination, and dedication your position would allow me to further hone these skills. \linebreak
+
+I sincerely hope that I will be considered for a \textbf{\color{accent}\MakeUppercase{position in company/lab}} and I would like to thank you very much for reading my application. I look forward to hearing from you, or providing any additional information you require. \linebreak
 
 
 \textbf{Yours faithfully,}\\
-\vspace{5mm}
+\vspace{3mm}
 
 {\color{headingrule}\rule{6cm}{1pt}\par} 
-\vspace{2mm}
+\vspace{1mm}
 \large\textbf{\color{tagline}Andrew Simon Wilson}
 
 

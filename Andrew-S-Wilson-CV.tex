@@ -1,0 +1,370 @@
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and academicons fonts
+%% and packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+\usepackage[none]{hyphenat}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+
+\definecolor{PastelGreen}{HTML}{00a86b}
+\definecolor{DarkPastelGreen}{HTML}{00754b}
+\definecolor{DarkerPastelGreen}{HTML}{00422a}
+\definecolor{DarkGoldenRod}{HTML}{b8860b}
+
+\colorlet{name}{DarkerPastelGreen}
+\colorlet{tagline}{DarkPastelGreen}
+\colorlet{heading}{DarkPastelGreen}
+\colorlet{headingrule}{DarkGoldenRod}
+\colorlet{subheading}{PastelGreen}
+\colorlet{accent}{PastelGreen}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+
+\begin{document}
+
+
+% Change the page layout if you need to
+\newgeometry{left=1cm,right=1cm,top=1cm,bottom=1cm,columnsep=8mm} % min. for A4 is ~1.2cm
+
+
+%%%%%%%%%% HEADER - NAME & TITLE %%%%%%%%%%
+\name{Andrew Simon Wilson}
+\tagline{Engineer \& \href{http://www.erasmus-master.emimeo.eu/}{EMIMEO Masters Candidate}}
+%% You can add multiple photos on the left or right
+\photoR{3cm}{Images/a-wilson-portrait.jpg}
+% \photoL{2.5cm}{Yacht_High,Suitcase_High}
+
+%%%%%%%%%% HEADER - CONTACT INFO, SOCIAL MEDIA ETC. %%%%%%%%%%
+\personalinfo{
+  \email{andrew.s.wilson@protonmail.com}
+  \linkedin{andrew-simon-wilson}
+  \github{AS-Wilson} \\
+  \phone{+44 7930 560 383}
+  \mailaddress{\href{https://goo.gl/maps/UoFidSxZUr3fwpYF8}{41 Ashcroft Way, Lower Ballinderry, BT28 2AY, Northern Ireland}}
+  {\color{PastelGreen}\faCalendar{{\color{LightGrey}{10/05/1997}}}}
+}
+
+  %% ADDITIONAL OPTIONS %%  
+  % \location{Lisburn, Northern Ireland}
+  % \homepage{www.homepage.com}
+  % \twitter{@twitterhandle}
+  
+  %% TEMPLATE AUTHORS NOTES FOR THIS SECTION %%
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+  % \orcid{0000-0000-0000-0000}
+  %% You can add your own arbtrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+
+
+
+%%%%% Career Aims %%%%%
+\cvsection{Career Aims}
+
+\begin{itemize}
+\item Gain more in-depth knowledge in Physics, Electronics, and Software Engineering.
+\item Attain a Masters in Physics, Electronics, programming, or similar fields.
+\item Obtain an industry or PhD position and gain experience in Quantum Physics, Electronic Design, or a related field.
+\end{itemize}
+
+\vspace{1mm}
+My career aims are the goals I intend to achieve in the next five years. However, I will always have a love of learning, research, and engineering in general and my desire to learn, create, and explore will never stop.
+
+
+\medskip
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.65}
+
+%%%%%%%%%% LEFT HAND COLUMN %%%%%%%%%%
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+%%%%% WORK EXPERIENCE %%%%%
+\cvsection{Relevant Work Positions}
+
+
+\cvevent{\href{https://www.7techgroup.com/}{\textbf{Seven Technologies Group}}}{Student Mechatronics Engineer}{September 2020 -- July 2021}{\href{https://goo.gl/maps/dPCEktvg6u2Tcho16}{Lisburn, Northern Ireland}}
+
+Design and testing of a prototype, portable PTU (Pan \& Tilt Unit) and camera controller design.
+\begin{itemize}
+\item Embedded Linux-based OS/Kernel/Device-Tree programming for the \href{https://developer.nvidia.com/embedded/jetson-modules}{NVIDIA Jetson Nano \& Xavier NX platforms.}
+\item Analogue \& high-speed (HDMI, USB SS, MIPI-CSI2, etc.) digital design, and PCB Layout using Altium.
+\end{itemize}
+
+
+\divider
+
+
+\cvevent{}{Electronics Placement Engineer}{May 2019 -- August 2020}{\href{https://goo.gl/maps/dPCEktvg6u2Tcho16}{Lisburn, Northern Ireland}}
+\begin{itemize}
+\item Analogue / high-speed digital circuit design and PCB Layout based on specifications both in projects on my own, and as part of a team of Engineers.
+\item Design / testing of low-level software \& edge compute ML algorithms for an \href{https://developer.nvidia.com/embedded/jetson-modules}{Nvidia Jetson TX2} based, embedded, smart sensor system.
+\item Embedded microcontroller programming, testing, and hardware debugging involving various trackers and communication devices.
+\end{itemize}
+
+
+\smallskip
+
+
+%%%%% EDUCATION %%%%
+\cvsection{Relevant Education}
+
+\cvevent{\href{http://www.erasmus-master.emimeo.eu/}{\textbf{EMIMEO} - Erasmus Master on Innovative Microwave Electronics and Optics}}{}{Sep 2021 - Present}{\textbf{\href{https://www.unilim.fr/}{UNILIM}} \& \textbf{\href{https://www.unibs.it/en}{UNIBS}}}
+An \textbf{\href{https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en}{Erasmus Mundus Joint Masters Degree}} focusing on electromagnetics and photonics. \textbf{Selected modules: } \\
+Quantum Technologies, Microwave Engineering, Photonics, Digital Modulation and Channel Coding, and Active \& NL Electronics.\\
+{\scriptsize\color{accent}I can provide more relevant modules for applications, these are some of my favourite courses}
+
+%% Remote Sensing Data Acquisition, Image Data Analysis, Antennas, Optoelectronics, Optical Communication Sys., Digital Sys. for Telecommunications, Measurements and Instrumentation for Telecommunications,  Fundamentals of Coherent Photonics.
+
+\divider
+
+\cvevent{\href{https://www.ulster.ac.uk/courses/202324/mechatronic-engineering-30804}{\normalsize \textbf{BEng Mechatronic Engineering} and Diploma in Professional Practice}}{}{Sep 2017 - Sep 2021}{\href{https://www.ulster.ac.uk/}{Ulster University, Northern Ireland}}
+During this degree I also completed two years of work experience as an electronic design engineer. \textbf{Selected modules:} \\
+ASICs and Digital Design, Mechatronics 1/2, Electronics 1/2, Embedded Systems, and Analytical Methods for Engineers.\\
+{\scriptsize\color{accent}I can provide more relevant modules for applications, these are some of my favourite courses}
+
+%% Engineering Programming, Control Theory and Applications, Mechanics 1{\&}2, Final Year Project
+
+
+
+%%%%%%%%%% RIGHT HAND COLUMN %%%%%%%%%%
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+
+%%%%% PROGRAMMING LANGUAGES %%%%%
+\cvsection{Programming and \\ \vspace{1mm}Software}
+
+\cvskill{\href{https://www.latex-project.org/}{\LaTeX}}{5}
+\cvskill{Embedded C/\href{https://isocpp.org/}{C++}}{4}
+\cvskill{\href{https://www.gnu.org/software/bash/}{BASH}/\href{https://www.kernel.org/}{Linux}}{4}
+\cvskill{\href{https://www.python.org/}{Python}}{4}
+\cvskill{\href{https://www.mathworks.com/products/matlab.html}{MATLAB}}{4}
+\cvskill{\href{https://git-scm.com/}{CL Git}}{3}
+
+\smallskip \divider
+
+\cvskill{\href{https://www.altium.com/}{Altium}/\href{https://www.kicad.org/}{KiCAD}}{5}
+\cvskill{\href{https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html}{LTSpice}/\href{https://www.pspice.com/}{PSpice}}{4}
+\cvskill{\href{https://solidedge.siemens.com/en/}{SolidEdge}/\href{https://www.solidworks.com/}{Works}}{4}
+\cvskill{\href{https://www.3ds.com/products-services/simulia/training/course-descriptions/cst-studio-suite-microwave-and-antenna/}{CST MW Studio}}{3}
+\cvskill{\href{https://www.ansys.com/products/electronics/ansys-hfss}{Ansys HFSS}}{3}
+\cvskill{\href{https://www.keysight.com/us/en/products/software/pathwave-design-software/pathwave-advanced-design-system.html}{Keysight ADS}}{3}
+
+
+\bigskip
+\bigskip
+\bigskip
+
+%%%%% REFERENCES %%%%%
+\cvsection{References}
+
+% \cvref{name}{email}{mailing address}
+\cvref{\href{https://www.ulster.ac.uk/staff/rj-mcmurray}{Dr.\ Robert J. McMurray, \\ Mechatronics Course Director}}{rj.mcmurray@ulster.ac.uk}
+{\phone{+44 28 9036 6176}} \\
+\vspace{1mm}
+{\location{\href{https://www.ulster.ac.uk/}{Ulster University}}} % Room 05F08, Shore Road\\BT37 0QB\\Northern Ireland
+
+\divider
+
+\vspace{-0.5em}
+
+\cvref{Christopher Armstong, \\ \href{https://www.7techgroup.com/}{Head of Electronic Engineering}}{chris.armstrong@7techgroup.com}
+{\phone{+44 28 9260 5200}} \\
+\vspace{1mm}
+{\location{\href{https://www.7techgroup.com/}{Seven Technologies Group}}} 
+% 23 Enterprise Cresent\\BT28 2EN\\Northern Ireland}
+
+\divider
+
+\vspace{-0.5em}
+
+\textbf{Further references available on request}
+
+%% \cvref{Michael Jennings Ph.D, \\ (Personal Ref) Researcher, ECME Project}{mjennings061@gmail.com}{11 Friars Wood\\BT37 9RJ\\Northern Ireland}{\phone{+44 7889 016 684}}\\
+
+
+\end{paracol}
+
+
+
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.3}
+
+%%%%%%%%%% LEFT HAND COLUMN %%%%%%%%%%
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+
+
+
+%%%%% ACADEMIC INTERESTS %%%%%
+\cvsection{Academic \\ \vspace{1mm}Interests}
+
+\cvtag{Quantum Physics}
+\cvtag{Robotics \& Embedded Systems}
+\cvtag{Electronic \& Mechanical Design}
+
+
+\bigskip
+\bigskip
+
+
+%%%%% PROFESSIONAL SKILLS - FUCKIN SOFT SKILLS LIKE %%%%%
+\cvsection{Professional \vspace{1mm} \linebreak and Technical \vspace{1mm} \linebreak Skills} %% \\ \vspace{1mm}
+
+\cvtag{Analogue/Digital Electronics}
+\cvtag{Mechanical Design} 
+\cvtag{Python3}
+\cvtag{PCB Design}
+\cvtag{Prototyping}
+\cvtag{Embedded programming}
+
+\cvtag{Problem Solving}
+\cvtag{Fast Learner}
+\cvtag{Leadership}
+\cvtag{Autodidact}
+\cvtag{Good Communication}
+\cvtag{Teamwork} 
+\cvtag{Initiative}
+
+
+
+
+%%%%%%%%%% RIGHT HAND COLUMN %%%%%%%%%%
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+%%%%% PUT SOMETHING ELSE CLEVER HERE %%%%%
+\cvsection{Personal Projects and Other  \\ \vspace{1mm}Work/Education}
+
+\cvevent{Rogue GP, Independent Race Team}{Design Engineer \& Team Member}{Nov 2019 -- Present}{Northern Ireland}{\github{AS-Wilson/RogueGP}} \\
+\vspace{1mm}
+Self-funded Green Power Electric vehicle race team. A team of Engineers designing and manufacturing a car (Leictreachas - Irish for electric) to compete worldwide.
+\begin{itemize}
+\item MCAD design and production of technical drawings for the vehicle chassis, suspension, and drivetrain.
+\item Manufacture of prototypes and working designs, using a variety of tools and techniques including Aluminium TIG welding, aluminium casting, composites manufacture, power \& hand tools, etc.
+\end{itemize}
+
+\divider
+
+\cvevent{\href{https://www.primaryengineer.com/}{Primary Engineer}, Narrow-Bridge Vehicle Detection \\System}{Engineer}{Sep 2020 -- Dec 2020}{\href{https://www.ulster.ac.uk/}{Ulster University}}{\github{mjennings061/primary-engineer}}\\
+\vspace{1mm}
+Team-based project using C++ programming of microcontroller and PIR sensors to detect passing cars before a narrow bridge. A signal is sent, via Wi-Fi and RF, to a receiving device to warn oncoming vehicles using LEDs. Project completed in mid December 2020.
+
+\divider
+
+\end{paracol}
+
+\cvevent{\href{https://www.embl.org/about/info/undergraduates/events/2022-visualising-life/}{Interdisciplinary Approaches to Biology}}{Selected Participant}{Jul 2019}{\href{https://www.embl.org/}{EMBL, Heidelberg, Germany}}
+
+Two week summer school which introduced undergraduates from a variety of backgrounds (Engineering, Physics, Biology, etc.) to the current research at EMBL and other institutions. I obtained hands-on experience in wet-lab work, high-speed microscopy, and using machine learning and computer vision to analyse biological data.
+
+\divider
+
+
+\cvevent{Ulster Society of Student Engineers}{Chairperson}{May 2018 -- May 2019}{\href{https://www.ulster.ac.uk/}{Ulster University}, Northern Ireland}
+\begin{itemize}
+\item Management of, and participation in, technical projects, including but not limited to: NI Robotics League, RF Telescope, Greenpower electric car, etc.
+\item Designed, founded, and coordinated the first maker-space for Student Engineers in Ulster University
+\item Organised multiple STEM outreach programs for Sentinus, Greenpower, etc.
+\end{itemize}
+
+
+\divider
+
+\cvevent{\href{https://www.jesseblinds.co.uk/}{JESSE Blinds and Shutters}}{Welder, Fabricator, Fitter}{May 2016 -- May 2017}{Stoneyford, Northern Ireland}
+\begin{itemize}
+\item Manufacture and assembly of bespoke shutters, awnings, wind-breakers, gates, railings, etc. from technical drawings using MIG/ARC Welding, power/hand tools, and a variety of Engineering techniques.
+\item Production of technical drawings to customer specifications and drafting \\engineering drawings from self-recorded measurements.
+\end{itemize}
+
+
+\divider
+
+\cvevent{BTEC Level 3 180-Credit (UK Credits) Extended Diploma in Manufacturing Engineering}{}{Sep 2013 - May 2015}{\href{https://www.serc.ac.uk/}{South Eastern Regional College (SERC, Northern Ireland)}}
+Earned essential practical and theoretical mathematics, electronic, and mechanical skills in the modules completed in this course. A selection of Completed Modules include (but are not limited to): Application of Computer Numerical Control in Engineering, Computer Aided Manufacturing, Properties and Applications of Engineering Materials, etc.
+
+\smallskip
+
+
+
+\end{document}
+
+%%%%%%%%%% STUFF THAT MAY COME IN HANDY LATER %%%%%%%%%%
+
+%%%%% WHEEL THING %%%%%
+% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% \wheelchart{outer radius}{inner radius}{
+% comma-separated list of value/text width/color/detail}
+%\wheelchart{1.5cm}{0.5cm}{%
+%  6/8em/accent!30/{Sleep,\\beautiful sleep},
+%  3/8em/accent!40/Hopeful novelist by night,
+%  8/8em/accent!60/Daytime job,
+%  2/10em/accent/Sports and relaxation,
+%  5/6em/accent!20/Spending time with family
+%}
